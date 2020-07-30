@@ -27,27 +27,29 @@ public class Exchange {
         quickSort(num,0,num.length - 1);
     }
 
-    private void quickSort(int[] num, int start, int end)
-    {
+    public void quickSort(int[] num, int start, int end){
+
         int len = num.length;
-        if(start >= 0 && start < len && end >= 0 && end < len && start < end)
+        if(start < end)
         {
             int i = start, j = end;
             int vot = num[i];
-            while(i!=j){
-                while(i < j && vot<=num[j])
+            while(i != j){
+                while(i < j && num[j]>=vot)
                     j--;
-                if(i < j)
+                if(i < j){
                     num[i++] = num[j];
-                while(i < j && num[i] <= vot)
+                }
+                while(i < j && num[i]<= vot)
                     i++;
-                if(i < j)
+                if(i < j){
                     num[j--] = num[i];
+                }
             }
             num[i] = vot;
-            quickSort(num, i+1,end);
-            quickSort(num, start, j-1);
-
+            quickSort(num,i+1,end);
+            quickSort(num,start,i-1);
         }
     }
+
 }

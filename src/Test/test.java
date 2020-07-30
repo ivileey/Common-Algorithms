@@ -3,6 +3,7 @@ package Test;
 import Sort.Insertion.insertSort;
 import Sort.Select.Select;
 import Sort.exchange.Exchange;
+import Sort.merge.Merge;
 
 import java.util.Arrays;
 
@@ -11,7 +12,7 @@ public class test {
         int[] num = {35, 5, 36, 65, 3};
         insertSort is = new insertSort();
 //        is.insertSort(num);
-        is.shellSort(num);
+//        is.shellSort(num);
 
         Exchange exchange = new Exchange();
 //        exchange.bubbleSort(num);
@@ -19,7 +20,11 @@ public class test {
 
         Select select = new Select();
 //        select.selectSort(num);
-        select.heapSort(num);
+//        select.heapSort(num);
+
+//        Merge merge = new Merge();
+//        merge.mergeSort(num);
+
         System.out.println(Arrays.toString(num));
     }
 }
