@@ -5,26 +5,40 @@ import Sort.Select.Select;
 import Sort.exchange.Exchange;
 import Sort.merge.Merge;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class test {
     public static void main(String[] args){
-        int[] num = {35, 5, 36, 65, 3};
-        insertSort is = new insertSort();
-//        is.insertSort(num);
-//        is.shellSort(num);
+        //List<Object> list = new ArrayList<>();
+        //List<Object> list = new LinkedList<>();
 
-        Exchange exchange = new Exchange();
-//        exchange.bubbleSort(num);
-        exchange.quickSort(num);
+//        list.add(1);
+//        list.add(2);
+//        list.add(null);
 
-        Select select = new Select();
-//        select.selectSort(num);
-//        select.heapSort(num);
+//        Set<Object> set = new HashSet<>();
+        //Set<Object> set = new LinkedHashSet<>();
+//        Set<Object> set = new TreeSet<>();
 
-//        Merge merge = new Merge();
-//        merge.mergeSort(num);
+//        set.add(1);
+//        set.add(2);
+//        set.add(null);
 
-        System.out.println(Arrays.toString(num));
+        Map<Object,Object> map = new Hashtable<>();
+        map.put(1,1);
+        map.put(3,null);
+
+        Set<Map.Entry<Object,Object>> set = map.entrySet();
+        Iterator<Map.Entry<Object,Object>> iterator = set.iterator();
+
+        while(iterator.hasNext())
+        {
+            Map.Entry<Object,Object> entry = iterator.next();
+            System.out.println(entry.getKey());
+        }
+
+        for(Object i : set) {
+            System.out.println(i);
+        }
     }
 }

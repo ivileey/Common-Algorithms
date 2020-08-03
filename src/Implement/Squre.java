@@ -1,4 +1,4 @@
-package Runnerble;
+package Implement;
 
 public class Squre implements PrintArea{
     private long num;
